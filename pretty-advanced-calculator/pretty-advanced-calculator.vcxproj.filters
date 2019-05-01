@@ -2,7 +2,12 @@
 <Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup>
     <ClCompile Include="main.cpp" />
-    <ClCompile Include="pretty_advanced_calculator.cpp" />
+    <ClCompile Include="pretty_advanced_calculator.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
+    <ClCompile Include="calculator_view.cpp">
+      <Filter>View</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="Resource Files">
@@ -10,23 +15,34 @@
       <Extensions>qrc;*</Extensions>
       <ParseFiles>false</ParseFiles>
     </Filter>
-    <Filter Include="Form Files">
+    <Filter Include="View">
+      <UniqueIdentifier>{fee24148-1c7d-4396-8f21-61fc4e95cc17}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="View\Form Files">
       <UniqueIdentifier>{99349809-55BA-4b9d-BF79-8FDBB0286EB3}</UniqueIdentifier>
       <Extensions>ui</Extensions>
       <ParseFiles>true</ParseFiles>
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <QtRcc Include="pretty_advanced_calculator.qrc">
-      <Filter>Resource Files</Filter>
-    </QtRcc>
-  </ItemGroup>
-  <ItemGroup>
-    <QtMoc Include="pretty_advanced_calculator.h" />
+    <QtMoc Include="pretty_advanced_calculator.h">
+      <Filter>View</Filter>
+    </QtMoc>
+    <QtMoc Include="calculator_view.h">
+      <Filter>View</Filter>
+    </QtMoc>
   </ItemGroup>
   <ItemGroup>
     <QtUic Include="pretty_advanced_calculator.ui">
-      <Filter>Form Files</Filter>
+      <Filter>View\Form Files</Filter>
     </QtUic>
+    <QtUic Include="calculator_view.ui">
+      <Filter>View\Form Files</Filter>
+    </QtUic>
+  </ItemGroup>
+  <ItemGroup>
+    <QtRcc Include="pretty_advanced_calculator.qrc">
+      <Filter>Resource Files</Filter>
+    </QtRcc>
   </ItemGroup>
 </Project>

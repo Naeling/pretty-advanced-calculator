@@ -3,12 +3,12 @@
 #include <QtWidgets/QMainWindow>
 #include "ui_pretty_advanced_calculator.h"
 
-class prettyAdvancedCalculator : public QMainWindow
+class PrettyAdvancedCalculator : public QMainWindow
 {
 	Q_OBJECT
 
 public:
-	prettyAdvancedCalculator(QWidget *parent = Q_NULLPTR);
+	PrettyAdvancedCalculator(QWidget *parent = Q_NULLPTR);
 
 private:
 	Ui::prettyAdvancedCalculatorClass ui;

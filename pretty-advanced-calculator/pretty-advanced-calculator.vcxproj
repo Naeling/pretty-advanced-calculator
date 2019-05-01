@@ -113,6 +113,7 @@
     </QtRcc>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="calculator_view.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="pretty_advanced_calculator.cpp" />
   </ItemGroup>
@@ -120,10 +121,17 @@
     <QtMoc Include="pretty_advanced_calculator.h" />
   </ItemGroup>
   <ItemGroup>
+    <QtUic Include="calculator_view.ui" />
     <QtUic Include="pretty_advanced_calculator.ui" />
   </ItemGroup>
   <ItemGroup>
     <QtRcc Include="pretty_advanced_calculator.qrc" />
+  </ItemGroup>
+  <ItemGroup>
+    <QtMoc Include="calculator_view.h">
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtTest;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtWidgets</IncludePath>
+      <IncludePath Condition="'$(Configuration)|$(Platform)'=='Release|x64'">.\GeneratedFiles;.;$(QTDIR)\include;.\GeneratedFiles\$(ConfigurationName);$(QTDIR)\include\QtCore;$(QTDIR)\include\QtGui;$(QTDIR)\include\QtANGLE;$(QTDIR)\include\QtTest;$(QTDIR)\include\QtUiTools;$(QTDIR)\include\QtWidgets</IncludePath>
+    </QtMoc>
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Condition="Exists('$(QtMsBuild)\qt.targets')">
